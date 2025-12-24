@@ -1,6 +1,5 @@
 ZWC_ZERO = '\u200b'  # bit 0
 ZWC_ONE = '\u200c'   # bit 1
-TERMINAL = "TERMINAL"
 
 
 def binary_to_text(binary):
@@ -20,10 +19,7 @@ def decode_message(stego_text):
 
     decoded_text = binary_to_text(binary_message)
 
-    if TERMINAL in decoded_text:
-        return decoded_text.split(TERMINAL)[0]
-    else:
-        return "[Pesan tidak ditemukan]"
+    return decoded_text
 
 
 if __name__ == "__main__":

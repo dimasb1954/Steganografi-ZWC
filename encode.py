@@ -1,6 +1,5 @@
 ZWC_ZERO = '\u200b'  # bit 0
 ZWC_ONE = '\u200c'   # bit 1
-TERMINAL = "TERMINAL"
 
 
 def text_to_binary(text):
@@ -8,8 +7,7 @@ def text_to_binary(text):
 
 
 def encode_message(cover_text, secret_message):
-    message_with_terminal = secret_message + TERMINAL
-    binary_message = text_to_binary(message_with_terminal)
+    binary_message = text_to_binary(secret_message)
 
     zwc_sequence = ''
     for bit in binary_message:
